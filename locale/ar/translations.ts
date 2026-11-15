@@ -1736,7 +1736,7 @@
     </message>
     <message>
         <source>Select Subtitles</source>
-        <translation>اختيار التردمات</translation>
+        <translation>اختيار الترجمات</translation>
     </message>
     <message>
         <source>Select Language</source>
@@ -1768,7 +1768,7 @@
     </message>
     <message>
         <source>AppearsOn</source>
-        <translation>يظهر على</translation>
+        <translation>يظهر قي</translation>
     </message>
     <message>
         <source>Public Profile</source>
@@ -1974,63 +1974,63 @@
     </message>
     <message>
         <source>Colors specific to the watched check mark &amp; unplayed count box.</source>
-        <translation type="unfinished"></translation>
+        <translation>ألوان محددة لصندوق عدد مؤشر المشاهدة و غير المشاهدة.</translation>
     </message>
     <message>
         <source>The background color of the check mark &amp; unplayed count shown in the top right corner of items.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون خلفية عدّاد علامة التأشير و غير المشاهدة الظاهر زاوية أعلى يمين العناصر.</translation>
     </message>
     <message>
         <source>Unplayed Count</source>
-        <translation type="unfinished"></translation>
+        <translation>عدّاد غير المشغّل</translation>
     </message>
     <message>
         <source>The color of the unplayed count number.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون عدد العناصر غير المشغّلة.</translation>
     </message>
     <message>
         <source>Watched Check Mark</source>
-        <translation type="unfinished"></translation>
+        <translation>مؤشر المشاهدة</translation>
     </message>
     <message>
         <source>The color of the watched check mark.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون مؤشر المشاهدة.</translation>
     </message>
     <message>
         <source>Dialog Popups</source>
-        <translation type="unfinished"></translation>
+        <translation>اضبارات النوافذ المنبثقة</translation>
     </message>
     <message>
         <source>Colors specific to dialog popups</source>
-        <translation type="unfinished"></translation>
+        <translation>ألونم محددة لاضبارة النوافذ المنبثقة</translation>
     </message>
     <message>
         <source>The background color for all dialog popups.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون خلفية كل اضبارات النوافذ المنبثقة.</translation>
     </message>
     <message>
         <source>Bold Text</source>
-        <translation type="unfinished"></translation>
+        <translation>نص عريض</translation>
     </message>
     <message>
         <source>The text color for bold text.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون نص النص الغليض.</translation>
     </message>
     <message>
         <source>Horizontal Border line</source>
-        <translation type="unfinished"></translation>
+        <translation>خط حدود افقي</translation>
     </message>
     <message>
         <source>The color of the thin border line under the header text.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون خط الحد الرفيع تحت نص العنوان.</translation>
     </message>
     <message>
         <source>Selected Text</source>
-        <translation type="unfinished"></translation>
+        <translation>النص المختار</translation>
     </message>
     <message>
         <source>The text color for the item the cursor is over.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون نص العنصر تحت المؤشر.</translation>
     </message>
     <message>
         <source>Text Color</source>
@@ -2046,87 +2046,87 @@
     </message>
     <message>
         <source>The text color for the author in the What&apos;s New popup.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون نص المؤلف في منبثقة ما الجديد.</translation>
     </message>
     <message>
         <source>Home Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>الصفحة الرئيسية</translation>
     </message>
     <message>
         <source>Colors specific to the home screen</source>
-        <translation type="unfinished"></translation>
+        <translation>ألوان محددة للصفحة الرئيسية</translation>
     </message>
     <message>
         <source>My List Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>ايقونة لائحتي</translation>
     </message>
     <message>
         <source>The color of the star icon in the My List library item.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون ايقونة الندمة في لائحة عناصر المكتبة خاصتي.</translation>
     </message>
     <message>
         <source>Row Headers</source>
-        <translation type="unfinished"></translation>
+        <translation>عناوين الصف</translation>
     </message>
     <message>
         <source>The text color of the headers of each row.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون عنوان كل صف.</translation>
     </message>
     <message>
         <source>Row Item Background</source>
-        <translation type="unfinished"></translation>
+        <translation>خلفية عنصر الصف</translation>
     </message>
     <message>
         <source>The background color of items. Only seen if no image loads on top of it.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون خلفية العناصر. فقط تظهر عند عدم وجود صورة فوقها.</translation>
     </message>
     <message>
         <source>Row Item Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>تدريج عنصر الصف</translation>
     </message>
     <message>
         <source>The color of the watched portion of the progress bar.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون للجزء المشاهد من التدريج.</translation>
     </message>
     <message>
         <source>Row Item Progress Background</source>
-        <translation type="unfinished"></translation>
+        <translation>خلفية عنصر تدرج الصف</translation>
     </message>
     <message>
         <source>The background color of the progress bar.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون خلفية التدرج.</translation>
     </message>
     <message>
         <source>Row Item Subtitle</source>
-        <translation type="unfinished"></translation>
+        <translation>ترجمة عنصر الصف</translation>
     </message>
     <message>
         <source>The text color of the second line displayed under items.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون نص السطر الثاني ضمن العناصر المعروضة.</translation>
     </message>
     <message>
         <source>Row Item Title</source>
-        <translation type="unfinished"></translation>
+        <translation>عنوان عنصر الصف</translation>
     </message>
     <message>
         <source>The text color of the first line displayed under items.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون نص أول سطر ظاهر في العناصر.</translation>
     </message>
     <message>
         <source>Username In Header</source>
-        <translation type="unfinished"></translation>
+        <translation>اسم المستخدم في الترويسة</translation>
     </message>
     <message>
         <source>The text color of the user&apos;s name in the header.</source>
-        <translation type="unfinished"></translation>
+        <translation>لون نص اسم المستخدم في الترويسة.</translation>
     </message>
     <message>
         <source>Shuffle Play Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>خلط تجميعة التشغيل</translation>
     </message>
     <message>
         <source>Note: Force transcode option automatically enabled due to video rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>ملاحظة: اجبار اختيار التشفير تلقائيا مفعل عند تدوير الفيديو</translation>
     </message>
     <message>
         <source>Start Episode List From First Unwatched Episode</source>
@@ -2502,6 +2502,198 @@
     <message>
         <source>Playback Mode</source>
         <translation>نمط التشغيل</translation>
+    </message>
+    <message>
+        <source>Press Stop again to close player</source>
+        <translation>اضغط إيقاف مجددا لاغلاق المشغّل</translation>
+    </message>
+    <message>
+        <source>Unknown Artist</source>
+        <translation>فنان مجهول</translation>
+    </message>
+    <message>
+        <source>Unknown Album</source>
+        <translation>ألبوم مجهول</translation>
+    </message>
+    <message>
+        <source>Radio Stations</source>
+        <translation>محطات الاذاعة</translation>
+    </message>
+    <message>
+        <source>Most Played Tracks</source>
+        <translation>أكثر المسارات تشغيلا</translation>
+    </message>
+    <message>
+        <source>Least Played Tracks</source>
+        <translation>أقل المسارات تشغيلا</translation>
+    </message>
+    <message>
+        <source>No media matched radio station criteria</source>
+        <translation>لا يوجد تطابق بين محطة الاذاعة و الوسيطة</translation>
+    </message>
+    <message>
+        <source>The server found no media matching the filter criteria for this radio station.</source>
+        <translation>الخادم لم يعثر على وسيطة تطابق معيار محطة الاذاعة هذه.</translation>
+    </message>
+    <message>
+        <source>Background color to use on home screen block</source>
+        <translation>لون خلفية يستخدم في قسم صفحة البداية</translation>
+    </message>
+    <message>
+        <source>Background Color</source>
+        <translation>لون الخلفية</translation>
+    </message>
+    <message>
+        <source>Direction to sort media before cutting off at limit</source>
+        <translation>اتجاه ترتيب الوسيطة قبل الانقطاع عند الحد</translation>
+    </message>
+    <message>
+        <source>Station Name</source>
+        <translation>اسم المحطة</translation>
+    </message>
+    <message>
+        <source>Name to identify radio station</source>
+        <translation>اسم تعريف محطة الاذاعة</translation>
+    </message>
+    <message>
+        <source>Confirm Exit</source>
+        <translation>تأكيد الخروج</translation>
+    </message>
+    <message>
+        <source>Show a confirmation prompt before exiting Jellyfin from the home screen.</source>
+        <translation>اظهار رسالة التأكيد قبل الخروج من صفحة Jellyfin الرئيسية.</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to exit Jellyfin?</source>
+        <translation>هل أنت متأكد من رغبتك في الخروج من Jellyfin؟</translation>
+    </message>
+    <message>
+        <source>List of genres to include in station content</source>
+        <translation>لائحة بالأنواع للتضمين في محتوى المحطة</translation>
+    </message>
+    <message>
+        <source>A short description of the radio station</source>
+        <translation>وصف مختصر لمحطة الاذاعة</translation>
+    </message>
+    <message>
+        <source>Subtitle</source>
+        <translation>ترجمة</translation>
+    </message>
+    <message>
+        <source>Create Station</source>
+        <translation>تكوين محطة</translation>
+    </message>
+    <message>
+        <source>List of years to include in station content</source>
+        <translation>لائحة بالسنوات للتضمين في محتوى المحطة</translation>
+    </message>
+    <message>
+        <source>Field to sort media by before cutting off at limit</source>
+        <translation>حقل لترتيب الوسيطة قبل الانقطاع عند الحدود</translation>
+    </message>
+    <message>
+        <source>Item Limit</source>
+        <translation>حدود العنصر</translation>
+    </message>
+    <message>
+        <source>Maximum number of items to load</source>
+        <translation>أقصى عدد للعناصر المحملة</translation>
+    </message>
+    <message>
+        <source>Shuffle play your most played tracks</source>
+        <translation>خلط أكثر المسارات تشغيلا لك</translation>
+    </message>
+    <message>
+        <source>Shuffle play your least played tracks</source>
+        <translation>خلط أقل المسارات تشغيلا لك</translation>
+    </message>
+    <message>
+        <source>Press Play/Pause to jump to OK button</source>
+        <translation>اضغط تشغيل\إيقاف مؤقت للقفز إلى زر تم</translation>
+    </message>
+    <message>
+        <source>Your search returned more than 50 tags. Rework your search to reduce the number of matching tags.</source>
+        <translation>أعاد بحثك 50 أكثر من وسما. أعد البحث لتقليل عدد الوسوم المطابقة.</translation>
+    </message>
+    <message>
+        <source>Search Tags</source>
+        <translation>بحث الوسوم</translation>
+    </message>
+    <message>
+        <source>Your search returned no tags.</source>
+        <translation>بحثك لم يعثر على وسوم.</translation>
+    </message>
+    <message>
+        <source>Search Term</source>
+        <translation>شرط البحث</translation>
+    </message>
+    <message>
+        <source>Starts With</source>
+        <translation>إبدأ مع</translation>
+    </message>
+    <message>
+        <source>This Roku will stop receiving Jellyfin for Roku updates on October 1, 2026 due to Roku&apos;s new OS 15.1 minimum requirement. You can continue using the installed app, but it will never update unless you update your Roku OS.</source>
+        <translation>هذا الـ Roku سيتوقف عن استقبال تحدبثات Jellyfin لـ Roku من اكتوبر 1, 2026 بسبب متطلبات نظام Roku 15.1. يمكنك الاستمرار في استخدام التطبيق المثبت, لكن لن يتم تحديثه إلا عند تحديثك لنظام Roku OS.</translation>
+    </message>
+    <message>
+        <source>All releases will be blocked unless we make this change. We&apos;re forced to do this, so if you&apos;re affected, contact Roku. Don&apos;t yell at us.</source>
+        <translation>كل الاصدارات سيتم حضرها إلا عندما نقوم بهذا التغيير. نحن مجبرون على فعل هذا, تواصل مع Roku. لا تصرخ علينا.</translation>
+    </message>
+    <message>
+        <source>You can hide this popup by disabling the &apos;User Interface / General / Show Roku OS Version Popup&apos; setting.</source>
+        <translation>بإمكانك اخفاء الرسائل المنبثقة عن طريق ايقاف اعداد &apos;واجهة المستخدم / عام / اظهار رسالة منبثقة بإصدار Roku OS&apos;.</translation>
+    </message>
+    <message>
+        <source>Roku OS Version Warning</source>
+        <translation>تحذير إصدار Roku OS</translation>
+    </message>
+    <message>
+        <source>Appears On</source>
+        <translation>يظهر على</translation>
+    </message>
+    <message>
+        <source>Albums (%1)</source>
+        <translation>ألبومات (%1)</translation>
+    </message>
+    <message>
+        <source>%1 Song</source>
+        <translation>%1 أغنية</translation>
+    </message>
+    <message>
+        <source>%1 Songs</source>
+        <translation>1% اغاني</translation>
+    </message>
+    <message>
+        <source>%1 Album</source>
+        <translation>1% ألبوم</translation>
+    </message>
+    <message>
+        <source>%1 Albums</source>
+        <translation>1% ألبومات</translation>
+    </message>
+    <message>
+        <source>Credited for:</source>
+        <translation>تم اعتماده لـ:</translation>
+    </message>
+    <message>
+        <source>%1 Appears On Album</source>
+        <translation>1% يظهر على الألبوم</translation>
+    </message>
+    <message>
+        <source>%1 Appears On Albums</source>
+        <translation>1% يظهر على الألبومات</translation>
+    </message>
+    <message>
+        <source>The server is still starting up. Please try again.</source>
+        <translation>لا يزال اخا\م قيد التشغيل. يرجى المحاولة مجددا.</translation>
+    </message>
+    <message>
+        <source>The server is temporarily unavailable. Please try again.</source>
+        <translation>الخادم غير متوفر حاليا. يرجى المحاولة مجددا.</translation>
+    </message>
+    <message>
+        <source>Appears On (%1)</source>
+        <translation>يظهر على (1%)</translation>
     </message>
 </context>
 </TS>

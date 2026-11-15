@@ -4,6 +4,13 @@
     "description": "Global settings that affect everyone that uses this Roku device.",
     "children": [
       {
+        "title": "Confirm Exit",
+        "description": "Show a confirmation prompt before exiting Jellyfin from the home screen.",
+        "settingName": "global.confirmexit",
+        "type": "bool",
+        "default": "false"
+      },
+      {
         "title": "Remember Me?",
         "description": "Remember the currently logged in user and try to log them in again next time you start Jellyfin.",
         "settingName": "global.rememberme",
@@ -150,6 +157,10 @@
               {
                 "title": "Play Normally",
                 "id": "playNormally"
+              },
+              {
+                "title": "Force Transcode (Allow Remux)",
+                "id": "forceTranscodeAllowRemux"
               },
               {
                 "title": "Force Transcode (Remux Disabled)",
@@ -791,6 +802,13 @@
             "default": "false"
           },
           {
+            "title": "Show Roku OS Version Popup",
+            "description": "Show Roku OS Version popup when app starts.",
+            "settingName": "load.rokuospopup",
+            "type": "bool",
+            "default": "true"
+          },
+          {
             "title": "Show What's New Popup",
             "description": "Show What's New popup when Jellyfin is updated to a new version.",
             "settingName": "load.allowwhatsnew",
@@ -858,6 +876,10 @@
                 "id": "none"
               },
               {
+                "title": "Radio Stations",
+                "id": "radiostations"
+              },
+              {
                 "title": "Recently Added Media",
                 "id": "latestmedia"
               }
@@ -902,6 +924,10 @@
               {
                 "title": "None",
                 "id": "none"
+              },
+              {
+                "title": "Radio Stations",
+                "id": "radiostations"
               },
               {
                 "title": "Recently Added Media",
@@ -950,6 +976,10 @@
                 "id": "none"
               },
               {
+                "title": "Radio Stations",
+                "id": "radiostations"
+              },
+              {
                 "title": "Recently Added Media",
                 "id": "latestmedia"
               }
@@ -994,6 +1024,10 @@
               {
                 "title": "None",
                 "id": "none"
+              },
+              {
+                "title": "Radio Stations",
+                "id": "radiostations"
               },
               {
                 "title": "Recently Added Media",
@@ -1042,6 +1076,10 @@
                 "id": "none"
               },
               {
+                "title": "Radio Stations",
+                "id": "radiostations"
+              },
+              {
                 "title": "Recently Added Media",
                 "id": "latestmedia"
               }
@@ -1086,6 +1124,10 @@
               {
                 "title": "None",
                 "id": "none"
+              },
+              {
+                "title": "Radio Stations",
+                "id": "radiostations"
               },
               {
                 "title": "Recently Added Media",
@@ -1134,6 +1176,10 @@
                 "id": "none"
               },
               {
+                "title": "Radio Stations",
+                "id": "radiostations"
+              },
+              {
                 "title": "Recently Added Media",
                 "id": "latestmedia"
               }
@@ -1178,6 +1224,10 @@
               {
                 "title": "None",
                 "id": "none"
+              },
+              {
+                "title": "Radio Stations",
+                "id": "radiostations"
               },
               {
                 "title": "Recently Added Media",

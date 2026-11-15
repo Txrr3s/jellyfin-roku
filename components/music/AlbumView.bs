@@ -1,4 +1,5 @@
 import "pkg:/source/enums/ColorPalette.bs"
+import "pkg:/source/enums/FavoriteStatus.bs"
 import "pkg:/source/enums/KeyCode.bs"
 import "pkg:/source/enums/MediaPlaybackState.bs"
 import "pkg:/source/enums/String.bs"
@@ -8,6 +9,20 @@ import "pkg:/source/utils/misc.bs"
 
 sub init()
     m.loadStatus = ViewLoadStatus.INIT
+    m.songList = m.top.findNode("songList")
+    m.songListDefaultNumRows = m.songList.numRows
+    m.songListMiniPlayerNumRows = m.songListDefaultNumRows - 2
+
+    scene = m.top.getScene()
+    if isValid(scene)
+        audioMiniPlayer = scene.findNode("audioMiniPlayer")
+        if isValid(audioMiniPlayer)
+            audioMiniPlayerVisibility = audioMiniPlayer.callFunc("isVisible")
+            if audioMiniPlayerVisibility
+                m.songList.numRows = m.songListMiniPlayerNumRows
+            end if
+        end if
+    end if
 
     ' Load background image
     m.LoadBackdropImageTask = CreateObject("roSGNode", "LoadItemsTask")
@@ -54,7 +69,6 @@ sub init()
     setupButtons()
 
     m.albumCover = m.top.findNode("albumCover")
-    m.songList = m.top.findNode("songList")
     m.infoGroup = m.top.FindNode("infoGroup")
     m.songListRect = m.top.FindNode("songListRect")
 
@@ -183,16 +197,13 @@ end sub
 
 sub adjustForMiniPlayer(audioMiniPlayerVisible = false)
     if not isChainValid(m.songList, "MusicArtistAlbumData") then return
-    if m.songList.MusicArtistAlbumData.getChildCount() < 7 then return
+    if m.songList.MusicArtistAlbumData.getChildCount() < m.songListMiniPlayerNumRows then return
 
-    newNumberOfRows = audioMiniPlayerVisible ? 7 : 9
+    newNumberOfRows = audioMiniPlayerVisible ? m.songListMiniPlayerNumRows : m.songListDefaultNumRows
 
-    ' To make Roku redraw with the new row count, we must move the cursor far enough for it to change content
     if m.songList.numRows <> newNumberOfRows
         focusedItem = m.songList.itemFocused
         m.songList.numRows = newNumberOfRows
-        m.songList.jumpToItem = m.songList.MusicArtistAlbumData.getChildCount() - 1
-        m.songList.jumpToItem = 0
         m.songList.jumpToItem = focusedItem
     end if
 end sub
@@ -315,21 +326,39 @@ end sub
 sub refreshAlbumTrackList()
     if not isChainValid(m.top.pageContent, "id") then return
 
-    m.focusedItem = m.songList.itemFocused
     m.LoadAlbumTask = CreateObject("roSGNode", "LoadAlbumTask")
     m.LoadAlbumTask.id = m.top.pageContent.id
     m.LoadAlbumTask.observeField("albumDetails", "onAlbumDetailsLoaded")
     m.LoadAlbumTask.control = TaskControl.RUN
 end sub
 
+sub updateAlbumTrackPlayCounts(albumDetails as dynamic)
+    if not isValid(albumDetails) or not isValid(m.top.albumData) then return
+
+    existingSongsByID = {}
+    for each existingSong in m.top.albumData.getChildren(-1, 0)
+        songID = chainLookupReturn(existingSong, "id", string.EMPTY)
+        if isValidAndNotEmpty(songID)
+            existingSongsByID.AddReplace(songID, existingSong)
+        end if
+    end for
+
+    for each refreshedSong in albumDetails.getChildren(-1, 0)
+        songID = chainLookupReturn(refreshedSong, "id", string.EMPTY)
+        existingSong = existingSongsByID.LookupCI(songID)
+        if isValid(existingSong)
+            existingSong.playCount = refreshedSong.playCount
+        end if
+    end for
+end sub
+
 sub onAlbumDetailsLoaded()
     m.LoadAlbumTask.unobserveField("albumDetails")
     m.LoadAlbumTask.control = TaskControl.STOP
 
-    m.songList.doneLoading = false
-    m.songList.observeField("doneLoading", "onDoneLoading")
-    albumDetails = m.LoadAlbumTask.albumDetails
-    m.top.albumData = albumDetails
+    ' Update the rendered rows in place so refreshes preserve list focus.
+    updateAlbumTrackPlayCounts(m.LoadAlbumTask.albumDetails)
+    stopLoadingSpinner()
 end sub
 
 ' Populate on screen text variables
@@ -557,6 +586,23 @@ sub openMorePopup()
     m.global.sceneManager.callFunc("optionDialog", "libraryitem", m.top.pageContent.json.LookupCI("name") ?? tr("Options"), [], dialogData, paramData)
 end sub
 
+function isAlbumInfoInFocusChain() as boolean
+    if m.albumCoverBackground.isInFocusChain() then return true
+
+    if isValid(m.released)
+        if m.released.isInFocusChain() then return true
+    end if
+
+    if isValid(m.genres)
+        if m.genres.isInFocusChain() then return true
+    end if
+
+    if m.artistName.hasFocus() then return true
+    if m.overview.hasFocus() then return true
+
+    return false
+end function
+
 function onKeyEvent(key as string, press as boolean) as boolean
     if m.buttonGrp.isInFocusChain()
         if press and isStringEqual(key, KeyCode.PLAY)
@@ -656,6 +702,10 @@ function onKeyEvent(key as string, press as boolean) as boolean
         return true
     end if
 
+    if isStringEqual(key, KeyCode.PLAY) and isAlbumInfoInFocusChain()
+        if toggleAudioMiniPlayerPlayback() then return true
+    end if
+
     if m.albumCoverBackground.isInFocusChain()
         if isStringEqual(key, KeyCode.OK)
             zoomAlbumCover()
@@ -677,11 +727,12 @@ function onKeyEvent(key as string, press as boolean) as boolean
     end if
 
     if m.songList.hasFocus()
-        if key = KeyCode.OPTIONS
+        if isStringEqual(key, KeyCode.OPTIONS)
             focusedSong = m.songList.content.getChild(m.songList.itemFocused)
             if not isValidAndNotEmpty(focusedSong) then return false
 
-            dialogData = [tr("Add To Playlist")]
+            favoriteOptionText = chainLookupReturn(focusedSong, "favorite", false) ? tr("Remove From Favorites") : tr("Add To Favorites")
+            dialogData = [favoriteOptionText, tr("Add To Playlist")]
             m.global.sceneManager.callFunc("optionDialog", "libraryitem", focusedSong.LookupCI("title") ?? tr("Options"), [], dialogData, { id: focusedSong.LookupCI("id") })
 
             return true
@@ -913,16 +964,10 @@ sub onDoneLoading()
         m.loadStatus = ViewLoadStatus.FIRSTLOAD
     end if
 
-    if isValid(m.focusedItem)
-        m.songList.jumpToItem = m.focusedItem
-        m.focusedItem = invalid
-    end if
-
     scene = m.top.getScene()
     audioMiniPlayer = scene.findNode("audioMiniPlayer")
     if isValid(audioMiniPlayer)
         audioMiniPlayerVisibility = audioMiniPlayer.callFunc("isVisible")
-        adjustForMiniPlayer(audioMiniPlayerVisibility)
         processAddToQueueButtonVisibility(audioMiniPlayerVisibility)
     end if
 end sub
