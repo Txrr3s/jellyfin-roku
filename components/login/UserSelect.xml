@@ -22,7 +22,7 @@
 
     <Rectangle id="viewContent" translation="[0, 0]">
       <Text
-        text="Select User"
+        text="Welcome back."
         horizAlign="center"
         font="font:LargeSystemFont"
         height="100"

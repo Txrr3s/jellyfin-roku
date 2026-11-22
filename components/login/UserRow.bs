@@ -46,8 +46,21 @@ function setData()
     data = CreateObject("roSGNode", "ContentNode")
     row = data.CreateChild("ContentNode")
     for each item in userData
+        print "Tipo do objeto:"
+        print type(item)
+
+        print "Nome do usuário:"
+        print item.Name
+
+        print item
+
+        print "----------------"
+
         row.appendChild(item)
     end for
+
+    row.appendChild("add-user")
+
     m.top.content = data
     updateSize()
     return data
